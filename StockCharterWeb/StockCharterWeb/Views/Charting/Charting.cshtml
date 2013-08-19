@@ -1,0 +1,48 @@
+﻿@model StockCharterWeb.Models.ChartingModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.h2</title>
+</head>
+<body>
+    <div>
+        
+<h2>@ViewBag.h2 Scan </h2>
+		 <p><b>Last Update: @Model.LastUpdate Eastern Standard Time (New York), @Model.LastUpdate2 Central Europe Standard Time (Stockholm)</b></p>
+<table>
+
+	
+@foreach(var quote in Model.quotes){
+		<tr>		<td>
+                   
+					<img src="http://www.finviz.com/chart.ashx?t=@quote&ty=c&ta=0&p=d&s=l" height="300" />
+					
+                </td>
+
+
+			<td>
+                   
+					<img src="http://www.finviz.com/chart.ashx?t=@quote&ty=c&ta=0&p=w&s=l" height="200" />
+					
+                </td>
+			<td>
+                   
+					<img src="http://www.finviz.com/chart.ashx?t=@quote&ty=c&ta=0&p=m&s=l" height="200" />
+					
+                </td>
+		</tr>}
+		
+
+
+	
+	</table>
+    </div>
+</body>
+</html>

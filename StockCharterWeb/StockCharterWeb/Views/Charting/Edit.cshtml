@@ -1,0 +1,26 @@
+﻿@model StockCharterWeb.Models.ChartingModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+		  {
+			 <fieldset>
+				  
+			  <div class="editor-field">@Html.TextBoxFor(model => model.QuotesString)</div>
+				 <input type="submit" value="EditQuotes" id="sb"/>
+				 </fieldset>
+		  }
+    </div>
+</body>
+</html>

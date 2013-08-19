@@ -1,0 +1,18 @@
+﻿@model StockCharterWeb.Models.ChartingModel
+
+@{
+    ViewBag.Title = "Charting";
+}
+
+<h2>Charting</h2>
+
+<ul>
+	
+@foreach(var quote in Model.quotes){
+				<li>
+                    @quote
+                </li>
+		
+};
+
+	</ul>
